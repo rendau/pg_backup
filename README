@@ -1,3 +1,5 @@
 example crontab:
+  0 1 * * * (cd /home/user/pg_backup && ./cron_script.sh) > /home/user/pg_backup/cron.log 2>&1
 
-0 1 * * * (cd /home/user/pg_backup && ./cron_script.sh) > /home/user/pg_backup/cron.log 2>&1
+example pg_restore:
+  pg_restore -d {db} -U {user} /path/to/backup.custom
